@@ -10,7 +10,7 @@ Demo the app here: https://calc-arif.herokuapp.com/
 
 ![](calc-ss.png)
 
-##Tech Stack
+## Tech Stack
 
 Python, Flask
 
