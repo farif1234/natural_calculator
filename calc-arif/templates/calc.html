@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+    <div class="container py-4">
+
+      <form action="/" method="POST">
+
+        <div class="p-5 mb-4 bg-light rounded-3">
+          <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Expression Calculator!</h1>
+            <br>
+            <p class="fs-4 w3-animate-opacity">Enter any expression below</p>
+            <input type="text" id="myInput" oninput="myFunction()" class = "form-control" name="inp" value="" placeholder="See About page for examples!">
+            <br>
+            <button class="btn btn-outline-dark btn-lg w3-animate-opacity" type="submit">Calculate!</button>
+            <br><br><br>
+            <p class="lead" id="demo">  </p>
+            {%if first_time %}
+              <div class="w3-animate-fading">
+                <h3 class="display-5">Waiting...</h3>
+              </div>
+            {% else %}
+              <div class="w3-animate-zoom">
+                <h3 class="display-5">{{exp}} = {{new_text}}</h3>
+              </div>
+            {% endif %}
+
+            <script>
+            function myFunction() {
+              var x = document.getElementById("myInput").value;
+              document.getElementById("demo").innerHTML = x + " ";
+            }
+            </script>
+
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'calc.html' %}
+
+{% block content %}
+
+<div class="container py-4 w3-animate-opacity">
+
+
+  <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold">Expression Calculator</h1>
+      <br>
+      <p class="fs-4">
+        This calculator takes in both numerical and natural languange expressions to return a numerical output.
+        Try using some of the expressions below!
+      </p>
+      <br><br>
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item bg-light">7 plus 3</li>
+        <li class="list-group-item bg-light">4 times 2 minus 5</li>
+        <li class="list-group-item bg-light">5 * 3 x 13</li>
+        <li class="list-group-item bg-light">8 to the 3</li>
+        <li class="list-group-item bg-light">42 squared - sqrt(6)</li>
+      </ul>
+
+
+    </div>
+  </div>
+</div>
+{% endblock %}
